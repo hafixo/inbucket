@@ -16,7 +16,7 @@ RUN npm i
 RUN npm run build
 
 # Run in minimal image
-FROM alpine:3.10
+FROM alpine:3.13.7
 WORKDIR /opt/inbucket
 RUN mkdir bin defaults ui
 COPY --from=builder /build/inbucket bin
